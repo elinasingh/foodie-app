@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app='foodieApp'>
 
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
 </head>
 
 <body id="app">
-    <div class="login">
+    <div class="login  hidden">
         <div class="login-form">
             <h3> Login </h3>
             <form action="http://google.com" method="POST" name="loginForm">
@@ -52,7 +52,7 @@
 			</form>
         </div>
     </div>
-    <div class="main hidden">
+    <div class="main" ng-controller="mainController">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -79,6 +79,10 @@
         <div class="ui container">
             <div class="hero">
                 <p>Find the best restaurants in town</p>
+			
+            </div>
+			  <div ng-repeat="restaurant in restaurants">
+                {{restaurant}}
             </div>
         </div>
     </div>

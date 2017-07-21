@@ -18,17 +18,21 @@
 						cuisines: 'Cafe, Mexican, American, Italian, Lebanese, Continental',
 						cost: '900',
 						hours: '11 AM to 11 PM (Mon-Sun)',
+						votes:'180',
+						reviews:'200',
 						image: 'https://tinyurl.com/ybsnhfna'
 					},
 					{
 						name: 'Hakuna Matata',
-						address: '1231/35/2,7th Phase, Opposite Brigade Palm Springs, Bangalore',
+						address: '1231/35/2,7th Phase, Opposite Brigade, Bangalore',
 						location: 'JP Nagar',
 						category: 'North Indian, Asian, Seafood',
 						vote: '4.1',
 						cuisines: 'Modern Chinese',
 						cost: '1200',
 						hours: '12:30 AM to 11:30 PM (Mon-Sun)',
+						votes:'200',
+						reviews:'300',
 						image: 'https://tinyurl.com/y9tebdor'
 					},
 					{
@@ -40,17 +44,21 @@
 						cuisines: 'Desserts, Bakery',
 						cost: '800',
 						hours: '9 AM to 12 Midnight (Mon-Sun)',
+						votes:'190',
+						reviews:'250',
 						image: 'https://tinyurl.com/y7hwh5mr'
 					},
 					{
 						name: 'Tribute',
-						address: '89-B, Monica Complex, Ambamata Temple Road, Fateh Sagar, Udaipur',
+						address: '89-B, Monica Complex, Ambamata Road, Udaipur',
 						location: 'Fateh Sagar',
 						category: ' Fine Dining',
 						vote: '4.2',
 						cuisines: 'North Indian, Rajasthani, Continental',
 						cost: '1500',
 						hours: '11:30 AM to 11 PM (Mon-Sun)',
+						votes:'150',
+						reviews:'280',
 						image: 'https://tinyurl.com/y9daexb6'
 					},
 					{
@@ -62,6 +70,8 @@
 						cuisines: 'Modern Indian',
 						cost: '2200',
 						hours: '12 Noon to 1 AM (Mon-Sun)',
+						votes:'280',
+						reviews:'400',
 						image: 'https://tinyurl.com/y9urntqf'
 					},
 					{
@@ -73,6 +83,8 @@
 						cuisines: 'North Indian, Italian, Indian',
 						cost: '1200',
 						hours: '12 Noon to 10:30 PM (Mon-Sun)',
+						votes:'120',
+						reviews:'300',
 						image: 'https://tinyurl.com/ycp69uuf'
 					},
 					
@@ -85,6 +97,8 @@
 						cuisines: 'Continental, Cafe, French, North Indian, European',
 						cost: '1800',
 						hours: '11 AM to 11 PM (Mon-Sun)',
+						votes:'180',
+						reviews:'600',
 						image: 'https://tinyurl.com/yb5fn87q'
 					},
 					{
@@ -96,6 +110,8 @@
 						cuisines: 'Desserts, Street Food',
 						cost: '200',
 						hours: ' 9 AM to 9:30 PM (Mon-Sun)',
+						votes:'170',
+						reviews:'500',
 						image: 'https://tinyurl.com/yccjxy2h'
 					}]
 			

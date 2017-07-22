@@ -1,6 +1,10 @@
 
 		 var foodieApp = angular.module('foodieApp',[]);
 		 
+		 $('#myCarousel').carousel({
+				pause: 'none'
+				})
+		 
 		 
 		  foodieApp.controller('mainController',function($scope) {
 

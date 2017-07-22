@@ -8,6 +8,7 @@
     <title>Foodie</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	
 	
 	<script src="js/angular.min.js"></script>
@@ -134,10 +135,28 @@
 					</div>
 					
 					<div class="voting">
-						<div><small>{{restaurant.votes}} Votes</small>
+						<div><small>{{restaurant.votes}} Votes</small> </div>
 						<div class="reviews"><small>{{restaurant.reviews}} Reviews</small></div>
-					</div>
-			</div>
+				    </div>
+					
+					
+					<ul class="nav nav-pills order">
+					  <li role="presentation" >
+					  <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>  <b>Call</b></a>
+					  </li>
+					  <li role="presentation">
+					  <a class=" divider-line" href="#"><i class="fa fa-file-text" aria-hidden="true"></i>  <b>View Menu</b></a>
+					  </li>
+					  <li role="presentation">
+					  <a href="#"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> <b>Order Now</b></a>
+                      </li>
+					   <li role="presentation">
+					   <a href="#"> <i class="fa fa-calendar" aria-hidden="true"></i> <b>Book a Table</b></a>
+					  </li>
+					</ul>
+					
+					
+				
 
         </div>
     </div>

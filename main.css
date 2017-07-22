@@ -154,3 +154,21 @@ body {
 	margin-top:-7px;
 }
 
+.order.nav>li>a{
+	position: relative;
+    display: block;
+    padding: 10px 30px;
+    margin: -1px;
+	color: #595C60;
+	border-radius:0%;
+	border-left:0 !important;
+	border-right:0 !important;
+	border:1px solid #e7e7e7;
+	width:103%;
+    text-align: center;
+	
+}
+
+
+
+

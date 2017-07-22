@@ -20,6 +20,7 @@
 						hours: '11 AM to 11 PM (Mon-Sun)',
 						votes:'180',
 						reviews:'200',
+						order:'90mins Rs.20',
 						image: 'https://tinyurl.com/ybsnhfna'
 					},
 					{
@@ -33,6 +34,7 @@
 						hours: '12:30 AM to 11:30 PM (Mon-Sun)',
 						votes:'200',
 						reviews:'300',
+						order:'60mins Rs.80',
 						image: 'https://tinyurl.com/y9tebdor'
 					},
 					{
@@ -46,6 +48,8 @@
 						hours: '9 AM to 12 Midnight (Mon-Sun)',
 						votes:'190',
 						reviews:'250',
+						order:'50mins Rs.70',
+						discount:'Get 15% off on all home-delivery orders. Valid only when you order online on Zomato.',
 						image: 'https://tinyurl.com/y7hwh5mr'
 					},
 					{
@@ -59,6 +63,7 @@
 						hours: '11:30 AM to 11 PM (Mon-Sun)',
 						votes:'150',
 						reviews:'280',
+						order:'120mins Rs.100',
 						image: 'https://tinyurl.com/y9daexb6'
 					},
 					{
@@ -72,6 +77,7 @@
 						hours: '12 Noon to 1 AM (Mon-Sun)',
 						votes:'280',
 						reviews:'400',
+						order:'70mins Rs.30',
 						image: 'https://tinyurl.com/y9urntqf'
 					},
 					{
@@ -85,6 +91,7 @@
 						hours: '12 Noon to 10:30 PM (Mon-Sun)',
 						votes:'120',
 						reviews:'300',
+						order:'90mins Rs.80',
 						image: 'https://tinyurl.com/ycp69uuf'
 					},
 					
@@ -99,6 +106,7 @@
 						hours: '11 AM to 11 PM (Mon-Sun)',
 						votes:'180',
 						reviews:'600',
+						order:'70mins Rs.50',
 						image: 'https://tinyurl.com/yb5fn87q'
 					},
 					{
@@ -112,6 +120,7 @@
 						hours: ' 9 AM to 9:30 PM (Mon-Sun)',
 						votes:'170',
 						reviews:'500',
+						order:'50mins Rs.80',
 						image: 'https://tinyurl.com/yccjxy2h'
 					}]
 			

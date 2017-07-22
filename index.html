@@ -123,11 +123,15 @@
 							<div><small>Cuisines:</small></div>
 							<div><small>Cost for Two: </small></div>
 							<div><small>Hours:</small></div>
+							
+							
 						</div>
 						<div class="value">
 							<div>{{restaurant.cuisines}}</div>
 							<div>₹{{restaurant.cost | number}}</div>
 							<div>{{restaurant.hours}}</div>
+							
+							
 						</div>
 					</div>
 					<div class="rating">
@@ -137,6 +141,7 @@
 					<div class="voting">
 						<div><small>{{restaurant.votes}} Votes</small> </div>
 						<div class="reviews"><small>{{restaurant.reviews}} Reviews</small></div>
+						
 				    </div>
 					
 					
@@ -145,14 +150,16 @@
 					  <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>  <b>Call</b></a>
 					  </li>
 					  <li role="presentation">
-					  <a class=" divider-line" href="#"><i class="fa fa-file-text" aria-hidden="true"></i>  <b>View Menu</b></a>
+					  <a  href="#"><i class="fa fa-file-text" aria-hidden="true"></i>  <b>View Menu</b></a>
 					  </li>
 					  <li role="presentation">
-					  <a href="#"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> <b>Order Now</b></a>
-                      </li>
-					   <li role="presentation">
-					   <a href="#"> <i class="fa fa-calendar" aria-hidden="true"></i> <b>Book a Table</b></a>
+					   <a href="#"> <i class="fa fa-calendar divider-clr" aria-hidden="true"></i> <b class=" divider-clr">Book a Table</b></a>
 					  </li>
+					  <li role="presentation">
+					  <a  href="#"> <i  class="fa fa-shopping-bag divider-color " aria-hidden="true"></i> <b class=" divider-color">Order Now</b></a>
+                      <div class="order-now"><small>{{restaurant.order}}</small> </div>
+                      </li>
+					   
 					</ul>
 					
 					

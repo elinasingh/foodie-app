@@ -154,18 +154,39 @@ body {
 	margin-top:-7px;
 }
 
-.order.nav>li>a{
+.order.nav>li>a{ 
 	position: relative;
     display: block;
-    padding: 10px 30px;
+    padding: 17px 24px;
     margin: -1px;
 	color: #595C60;
 	border-radius:0%;
 	border-left:0 !important;
 	border-right:0 !important;
 	border:1px solid #e7e7e7;
-	width:103%;
     text-align: center;
+	font-size:16px;
+	
+}
+.divider-color
+{
+  color:#18B927;
+   
+}
+
+.divider-clr
+{
+	color:#6D9DD3;
+}
+.order-now
+{
+	font-size:14px;
+	position:absolute;
+	top: 2.9rem;
+    right: 1.9rem;
+    color: #3C3D3F;
+	margin-right:17px;
+	margin-top:2px;
 	
 }
 

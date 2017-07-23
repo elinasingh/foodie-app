@@ -13,29 +13,34 @@
 	
 	<script src="js/angular.min.js"></script>
 	
-	
+   <!--------------------------styling of foodie----------------------------->	
 	
 	<style>
      input.ng-invalid.ng-dirty{
         border: 1px solid red;
     }
     </style>
-
+   
+   <!--/.---------------------------------------------------------------------->
 
 
 </head>
-
+   <!---------------------------------login form------------------------------->
 <body id="app">
     <div class="login  hidden">
         <div class="login-form">
             <h3> Login </h3>
             <form action="http://google.com" method="POST" name="loginForm">
+			<!----------------------------entering email address and password--------------------------->
 				<div class="form-group">
 					<label for="user-email">Email address</label>
 					<input type="email" class="form-control" id="user-email" placeholder="Email" name="email" required ng-model="user.email">
 					<div ng-show="loginForm.email.$error.required">Required!</div>
                     <div ng-show="loginForm.email.$error.email">This doesn't look like a valid email</div>
 				</div>
+				<!---/.---------------------------------------------------------------------------------->
+				
+				<!--------------------------------password availability------------------------------------->
 				<div class="form-group">
 					<label for="user-password">Password</label>
 					<input type="password" class="form-control" id="user-password" placeholder="Password" name="password" required="" ng-model="user.password" ng-minlength="6" ng-maxlength="15">
@@ -49,7 +54,9 @@
 					Please enter your super secret ninja password 
 					</div>
 				</div>
-				<button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid">Login</button>
+				<!---/.--------------------------------------------------------------------------------------->
+				<!--- login button----->
+				<button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid">Login</button>  
 			</form>
         </div>
     </div>
@@ -77,6 +84,11 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
+	 <!----/.---------------------------------------------------------------------------------->
+	 
+		
+	<!-------------------------------------images slider------------------------------------>
+		
         <div class="ui container">
             <div class="hero">
 			
@@ -106,6 +118,10 @@
                 <p>Find the best restaurants in town</p>
 			
             </div>
+	<!--/.---------------------------------------------------------------------------------------->		
+			
+			
+	<!----------------------------------search bar---------------------------------------------->		
 			
 			
        <div class="search-bar">
@@ -116,11 +132,14 @@
 			<button type="submit" class="btn btn-default">Search</button>
 		  </form>
 		</div>
+	<!---/.---------------------------------------------------------------------------------------->
 			
-			<!-----------retraurant infomations--------------->
+	<!---------------------------retraurant infomations------------------------------------------>
 			
 			
 			  <div ng-repeat="restaurant in restaurants| filter:query" class="restaurant">
+			        
+		<!------------------------showing images,category,name,location of restaurants-------------------------->
 					<div class="rest-wrapper">
 						<div class="image">
 							<img src="{{restaurant.image}}" height="100" width="100">
@@ -145,33 +164,36 @@
 							
 						</div>
 					</div>
+		<!--/.---------------------------------------------------------------------------------------------------->
+					
+					<!------------------------------showing the cost and timings---------------------------------->
 					<div class="rest-extra">
 						<div class="type">
 							<div><small>Cuisines:</small></div>
 							<div><small>Cost for Two: </small></div>
 							<div><small>Hours:</small></div>
-							
-							
 						</div>
-						<div class="value">
+					<div class="value">
 							<div>{{restaurant.cuisines}}</div>
 							<div>₹{{restaurant.cost | number}}</div>
-							<div>{{restaurant.hours}}</div>
-							
-							
 						</div>
 					</div>
+					<!--/.------------------------------------------------------------------------------------------>
+					
+					
+					
+					<!------------------------------------------rating of restraunts------------------------------------------->
 					<div class="rating">
 						<strong>{{restaurant.vote}}</strong>
 					</div>
-					
+					<!-------------------------------------------reviews and votes--------------------------------------------->
 					<div class="voting">
 						<div><small>{{restaurant.votes}} Votes</small> </div>
 						<div class="reviews"><small>{{restaurant.reviews}} Reviews</small></div>
 						
 				    </div>
 					
-					
+					<!--------------------------------add list of calls order tables menues----------------------------------->
 					<ul class="nav nav-pills order">
 					  <li role="presentation" >
 					  <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>  <b>Call</b></a>
@@ -188,7 +210,7 @@
                       </li>
 					   
 					</ul>
-					
+		            <!--/.--------------------------------------------------------------------------------------------------------->			
 					
 				
 

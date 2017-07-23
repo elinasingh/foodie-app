@@ -1,16 +1,16 @@
 
-		 var foodieApp = angular.module('foodieApp',[]);
+		 var foodieApp = angular.module('foodieApp',[]);  
 		 
-		 $('#myCarousel').carousel({
+		 $('#myCarousel').carousel({ 
 				pause: 'none'
 				})
 		 
 		 
-		  foodieApp.controller('mainController',function($scope) {
+		  foodieApp.controller('mainController',function($scope) {  
 
 	      })
 
-			foodieApp.controller('mainController',function($scope) {
+			foodieApp.controller('mainController',function($scope) {   //restaurant information
 				
 					$scope.restaurants = [
 					{
@@ -67,7 +67,7 @@
 						hours: '11:30 AM to 11 PM (Mon-Sun)',
 						votes:'150',
 						reviews:'280',
-						order:'120mins Rs.100',
+						order:  '20mins Rs.100',
 						image: 'https://tinyurl.com/y9daexb6'
 					},
 					{

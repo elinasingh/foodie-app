@@ -154,20 +154,28 @@ body {
 	margin-top:-7px;
 }
 
+.nav>li {
+    position: relative;
+    display: flex;
+}
 .order.nav>li>a{ 
 	position: relative;
     display: block;
-    padding: 17px 24px;
+    padding: 17px 33px;
     margin: -1px;
 	color: #595C60;
 	border-radius:0%;
 	border-left:0 !important;
-	border-right:0 !important;
+	border-right:1px solid #e7e7e7;
 	border:1px solid #e7e7e7;
     text-align: center;
 	font-size:16px;
+	margin-left:-20px;
 	
+
 }
+
+
 .divider-color
 {
   color:#18B927;
@@ -188,6 +196,11 @@ body {
 	margin-right:17px;
 	margin-top:2px;
 	
+}
+
+.order {
+	margin-left: 22px;
+	width: 100%;
 }
 
 
@@ -226,6 +239,7 @@ html,body {
 .well {
     opacity:0.85
 }
+
 
 
 

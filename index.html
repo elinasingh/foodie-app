@@ -9,214 +9,30 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	
-	
+
+
 	<script src="js/angular.min.js"></script>
-	
-   <!--------------------------styling of foodie----------------------------->	
-	
+	<script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
+
+   <!----------------------------styling of foodie----------------------------->
+
 	<style>
      input.ng-invalid.ng-dirty{
         border: 1px solid red;
     }
     </style>
-   
+
    <!--/.---------------------------------------------------------------------->
 
 
 </head>
-   <!---------------------------------login form------------------------------->
-<body id="app">
-    <div class="login  hidden">
-        <div class="login-form">
-            <h3> Login </h3>
-            <form action="http://google.com" method="POST" name="loginForm">
-			<!----------------------------entering email address and password--------------------------->
-				<div class="form-group">
-					<label for="user-email">Email address</label>
-					<input type="email" class="form-control" id="user-email" placeholder="Email" name="email" required ng-model="user.email">
-					<div ng-show="loginForm.email.$error.required">Required!</div>
-                    <div ng-show="loginForm.email.$error.email">This doesn't look like a valid email</div>
-				</div>
-				<!---/.---------------------------------------------------------------------------------->
-				
-				<!--------------------------------password availability------------------------------------->
-				<div class="form-group">
-					<label for="user-password">Password</label>
-					<input type="password" class="form-control" id="user-password" placeholder="Password" name="password" required="" ng-model="user.password" ng-minlength="6" ng-maxlength="15">
-					<div ng-show="loginForm.password.$error.minlength">
-					Password must be at least 6 characters long 
-					</div>
-					<div ng-show="loginForm.password.$error.maxlength">
-					Password must be at most 15 characters long 
-					</div>
-					<div ng-show="loginForm.password.$error.required">
-					Please enter your super secret ninja password 
-					</div>
-				</div>
-				<!---/.--------------------------------------------------------------------------------------->
-				<!--- login button----->
-				<button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid">Login</button>  
-			</form>
-        </div>
-    </div>
-    <div class="main" ng-controller="mainController">
-        <nav class="navbar navbar-default navbar-fixed">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Foodie</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Order Online</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-	 <!----/.---------------------------------------------------------------------------------->
-	 
-		
-	<!-------------------------------------images slider------------------------------------>
-		
-        <div class="ui container">
-            <div class="hero">
-			
-			<div id="background-carousel">
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				  <div class="carousel-inner">
-					<div class="item active" style="background-image:url(https://tinyurl.com/y7fgfpuj)"></div>
-					<div class="item" style="background-image:url(https://tinyurl.com/yayrtcmq)"></div>
-					<div class="item" style="background-image:url(https://tinyurl.com/y8y7okzh)"></div>  
-					<div class="item" style="background-image:url(https://tinyurl.com/yc88mgwt)"></div> 
-					<div class="item" style="background-image:url(https://tinyurl.com/y7adjj4n)"></div> 
-				  </div>
-				</div>
-			</div>
-			 
-			 
-			<div id="content-wrapper">
-			<!-- PAGE CONTENT -->
-				<div class="container">
-					
-					<div class="well">
-					</div><!-- End Well -->
-				</div><!-- End Container -->
-			<!-- PAGE CONTENT -->
-			</div>
-			
-                <p>Find the best restaurants in town</p>
-			
-            </div>
-	<!--/.---------------------------------------------------------------------------------------->		
-			
-			
-	<!----------------------------------search bar---------------------------------------------->		
-			
-			
-       <div class="search-bar">
-			<form>
-			<div class="input-wrapper">
-			  <input type="text" class="form-control" placeholder="Search..." ng-model="query">
-			</div>
-			<button type="submit" class="btn btn-default">Search</button>
-		  </form>
-		</div>
-	<!---/.---------------------------------------------------------------------------------------->
-			
-	<!---------------------------retraurant infomations------------------------------------------>
-			
-			
-			  <div ng-repeat="restaurant in restaurants| filter:query" class="restaurant">
-			        
-		<!------------------------showing images,category,name,location of restaurants-------------------------->
-					<div class="rest-wrapper">
-						<div class="image">
-							<img src="{{restaurant.image}}" height="100" width="100">
-						</div>
-						<div class="rest-info">
-						
-						    <div class="rest-category">
-							   <small>{{restaurant.category}} </small>
-							</div>
-							
-							<div class="rest-name">
-							
-							<strong>{{restaurant.name}}</strong>
-							</div>
-							<div class="rest-address">
-								{{restaurant.address}}
-							</div>
-							
-							<div>
-							   <strong> {{restaurant.location}}</strong>
-							</div>
-							
-						</div>
-					</div>
-		<!--/.---------------------------------------------------------------------------------------------------->
-					
-					<!------------------------------showing the cost and timings---------------------------------->
-					<div class="rest-extra">
-						<div class="type">
-							<div><small>Cuisines:</small></div>
-							<div><small>Cost for Two: </small></div>
-							<div><small>Hours:</small></div>
-						</div>
-					<div class="value">
-							<div>{{restaurant.cuisines}}</div>
-							<div>₹{{restaurant.cost | number}}</div>
-							<div><small>{{restaurant.hours}}</small></div>
-						</div>
-					</div>
-					<!--/.------------------------------------------------------------------------------------------>
-					
-					
-					
-					<!------------------------------------------rating of restraunts------------------------------------------->
-					<div class="rating">
-						<strong>{{restaurant.vote}}</strong>
-					</div>
-					<!-------------------------------------------reviews and votes--------------------------------------------->
-					<div class="voting">
-						<div><small>{{restaurant.votes}} Votes</small> </div>
-						<div class="reviews"><small>{{restaurant.reviews}} Reviews</small></div>
-						
-				    </div>
-					
-					<!--------------------------------add list of calls order tables menues----------------------------------->
-					<ul class="nav nav-pills order">
-					  <li role="presentation" >
-					  <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>  <b>Call</b></a>
-					  </li>
-					  <li role="presentation">
-					  <a  href="#"><i class="fa fa-file-text" aria-hidden="true"></i>  <b>View Menu</b></a>
-					  </li>
-					  <li role="presentation">
-					   <a href="#"> <i class="fa fa-calendar divider-clr" aria-hidden="true"></i> <b class=" divider-clr">Book a Table</b></a>
-					  </li>
-					  <li role="presentation">
-					  <a  href="#"> <i  class="fa fa-shopping-bag divider-color " aria-hidden="true"></i> <b class=" divider-color">Order Now</b></a>
-                      <div class="order-now"><small>{{restaurant.order}}</small> </div>
-                      </li>
-					   
-					</ul>
-		            <!--/.--------------------------------------------------------------------------------------------------------->			
-					
-				
 
-        </div>
-    </div>
+<body id="app">
+
+
+
+
+     <div ng-view> </div>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>

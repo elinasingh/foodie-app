@@ -1,17 +1,36 @@
 
-		 var foodieApp = angular.module('foodieApp',[]);  
-		 
-		 $('#myCarousel').carousel({ 
-				pause: 'none'
-				})
-		 
-		 
-		  foodieApp.controller('mainController',function($scope) {  
+		 var foodieApp = angular.module('foodieApp',['ngRoute']);
+         //console.log(foodieApp);
 
-	      })
+			  $('#myCarousel').carousel({
+				 	pause: 'none'
+				 })
+
+			 foodieApp.config(function ($routeProvider) { //pass function as parameter
+				$routeProvider
+				.when('/',{
+					templateUrl: 'pages/login.html',
+					controller: 'loginController'
+				})
+				.when('/home',{
+					templateUrl: 'pages/main.html',
+					controller: 'mainController'
+				})
+			})
+
+		 //logincontroller
+		  foodieApp.controller('loginController',function($scope,$location) {
+               $scope.goToHome = function(){
+								 console.log("Do Something")
+								 $location.url('home')
+							 }
+          })
+
+		  //maincontroller
+
 
 			foodieApp.controller('mainController',function($scope) {   //restaurant information
-				
+
 					$scope.restaurants = [
 					{
 						name: 'Ricos',
@@ -98,7 +117,7 @@
 						order:'90mins Rs.80',
 						image: 'https://tinyurl.com/ycp69uuf'
 					},
-					
+
 					{
 						name: 'The French Door',
 						address: '102, West Bashyakaralu Road, RS Puram, Coimbatore',
@@ -127,7 +146,5 @@
 						order:'50mins Rs.80',
 						image: 'https://tinyurl.com/yccjxy2h'
 					}]
-			
+
 			})
-			
-			

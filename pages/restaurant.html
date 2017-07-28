@@ -4,9 +4,12 @@
 
 <div class="restaurant" ng-if="restaurant.name">
     <div class="rest-wrapper">
+
+    <!-------------------------------image of restraunts----------------------------->
         <div class="image">
             <img src="{{restaurant.image}}" height="100" width="100">
         </div>
+      <!------------------------------restraunt info. like name,address,location,etc---------------------------->
         <div class="rest-info">
             <div class="rest-category">
                <small>{{restaurant.category}} </small>
@@ -23,6 +26,8 @@
             </div>
         </div>
     </div>
+
+    <!-----------------------------extra info. for cost time ,etc--------------------------------->
     <div class="rest-extra">
         <div class="type">
             <div><small>Cuisines:</small></div>
@@ -31,6 +36,7 @@
             <div ng-if="restaurant.bestDish"><small>Recommended: </small></div>
 
         </div>
+        <!-------------------------value of the cost,hours multiple filters---------------------------------------->
         <div class="value">
             <div>{{restaurant.cuisines}}</div>
             <div>₹{{restaurant.cost | number}}</div>
@@ -42,9 +48,11 @@
       </div>
      </div>
     </div>
+    <!-------------------------rating of retaurant------------------------------------->
     <div class="rating">
         <strong>{{restaurant.vote}}</strong>
     </div>
+    <!---------------------------ingredients of the image which we send on api------------------>
           <div ng-if="ingredients">
               <ol>
               <li ng-repeat="ingredient in ingredients">

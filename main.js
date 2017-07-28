@@ -1,4 +1,5 @@
-
+			// foodieApp is the name of the app here
+			//ngRoute is not a directive it is a module
 		 var foodieApp = angular.module('foodieApp',['ngRoute']);
          //console.log(foodieApp);
 
@@ -6,6 +7,7 @@
 				 	pause: 'none'
 				 })
 
+       // configure krna
 			 foodieApp.config(function ($routeProvider) { //pass function as parameter
 				$routeProvider
 				.when('/',{
@@ -27,13 +29,14 @@
 			})
 
 
+  //iss function ke andar jo b aayega bhi kaam hoga controller ka
 
 					 //restaurantController
 					 foodieApp.controller('restaurantController',function($scope,$routeParams,$http,$location) {
 						 $scope.ingredients = [];
 							console.log($routeParams.id);
 							$scope.restaurantId = $routeParams.id;
-							var restaurants = [{
+							var restaurants = [{ //restaurant 1
 								name: 'Ricos',
 								address: '2526, 1st Floor, Hudson Lane, Kingsway Camp, Delhi',
 								location: 'Delhi University-GTB Nagar',
@@ -52,7 +55,7 @@
 								order:'90mins Rs.20',
 								image: 'https://tinyurl.com/ybsnhfna'
 							},
-							{
+							{    //restaurant 2
 								name: 'Hakuna Matata',
 								address: '1231/35/2,7th Phase, Opposite Brigade, Bangalore',
 								location: 'JP Nagar',
@@ -67,7 +70,7 @@
 								order:'60mins Rs.80',
 								image: 'https://tinyurl.com/y9tebdor'
 							},
-							{
+							{   //restaurant 3
 								name: 'Love & Cheesecake',
 								address: 'Eden 2, Central Ave, Hiranandani Gardens, Powai, Mumbai',
 								location: 'Powai',
@@ -83,7 +86,7 @@
 								discount:'Get 15% off on all home-delivery orders. Valid only when you order online on Zomato.',
 								image: 'https://tinyurl.com/y7hwh5mr'
 							},
-							{
+							{   //restaurant 4
 								name: 'Tribute',
 								address: '89-B, Monica Complex, Ambamata Road, Udaipur',
 								location: 'Fateh Sagar',
@@ -98,7 +101,7 @@
 								order:  '20mins Rs.100',
 								image: 'https://tinyurl.com/y9daexb6'
 							},
-							{
+							{   //restaurant 5
 								name: 'Farzi Cafe',
 								address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
 								location: 'Connaught Place',
@@ -113,7 +116,7 @@
 								order:'70mins Rs.30',
 								image: 'https://tinyurl.com/y9urntqf'
 							},
-							{
+							{   //restaurant 6
 								name: 'Jalpaan Restraunt',
 								address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
 								location: 'RS Puram',
@@ -129,7 +132,7 @@
 								image: 'https://tinyurl.com/ycp69uuf'
 							},
 
-							{
+							{   //restaurant 7
 								name: 'The French Door',
 								address: '102, West Bashyakaralu Road, RS Puram, Coimbatore',
 								location: 'RS Puram',
@@ -144,7 +147,7 @@
 								order:'70mins Rs.50',
 								image: 'https://tinyurl.com/yb5fn87q'
 							},
-							{
+							{  //restaurant 8
 								name: 'Bikaner Sweets',
 								address: 'Near Devkamal Hospital, Ratu Road, Ratu, Ranch',
 								location: 'Ratu',
@@ -163,6 +166,7 @@
               console.log($scope.restaurant.name);
 							$scope.getIngredients = function(url) {
 							// Do something
+
               //write ajax call here
 							var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'  //json object
 						     $http({
@@ -205,7 +209,7 @@
 											}
            })
 
-//favouritecontroller
+  //iss function ke andar jo b aayega bhi kaam hoga favouritecontroller ka
 
 foodieApp.controller('favController',function($scope,$location,$http) {
 
@@ -214,7 +218,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 
 //console.log($routeParams.id);
 
-  $scope.restaurants = [{
+  $scope.restaurants = [{   //dishes for favorite food that you like or not
 							id: 1,
 							bestDish: {
 										name: 'Bean Salad',
@@ -252,7 +256,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
                     }]
 
 
-
+         //list for you may like
 						$scope.lists1 = [
 						{'vl' : 'vegetable'},
 						{'vl' : 'almond'},
@@ -269,7 +273,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 								}
 					};
 
-					//
+					//list for you may not like
 					$scope.lists2 = [
 					{'vl' : 'meat'},
 					{'vl' : 'egg'},
@@ -286,14 +290,14 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 							}
 					};
 
-
-								$scope.getFav = function(url) {
+      //calling the getfav function
+				$scope.getFav = function(url) {
 						var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'
 										$http({
 											'method': 'POST',
 											'url': 'https://api.clarifai.com/v2/models/bd367be194cf45149e75f01d59f77ba7/outputs',
 											'headers': {
-												'Authorization': 'Key a83cf33d81ca4f71ae7f18345e7b8ab0',
+												'Authorization': 'Key fe486afe04fe4bf9a1fec63b55d9f8cb',
 												'Content-Type': 'application/json'
 											},
 											'data': data,
@@ -339,7 +343,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 										}, function (xhr) {
 																	   console.log(xhr);
 																	  });
-																}
+					}
 
 
 
@@ -348,7 +352,8 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 
 
 
-					 //logincontroller
+					  //iss function ke andar jo b aayega bhi kaam hoga logincontroller ka
+
 					  foodieApp.controller('loginController',function($scope,$location) {
 			               $scope.goToHome = function(){
 											 //console.log("Do Something")
@@ -356,11 +361,12 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 										 }
 			          })
 
-		    //maincontroller
+		      //iss function ke andar jo b aayega bhi kaam hoga maincontroller ka
+
        foodieApp.controller('mainController',function($scope) {   //restaurant information
 
 					$scope.restaurants = [
-					{
+					{                    //restaurant 1 for Restraunt.html
 						name: 'Ricos',
 						address: '2526, 1st Floor, Hudson Lane, Kingsway Camp, Delhi',
 						location: 'Delhi University-GTB Nagar',
@@ -375,7 +381,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 						order:'90mins Rs.20',
 						image: 'https://tinyurl.com/ybsnhfna'
 					},
-					{
+					{              //restaurant 2 for Restraunt.html
 						name: 'Hakuna Matata',
 						address: '1231/35/2,7th Phase, Opposite Brigade, Bangalore',
 						location: 'JP Nagar',
@@ -390,7 +396,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 						order:'60mins Rs.80',
 						image: 'https://tinyurl.com/y9tebdor'
 					},
-					{
+					{              //restaurant 3 for Restraunt.html
 						name: 'Love & Cheesecake',
 						address: 'Eden 2, Central Ave, Hiranandani Gardens, Powai, Mumbai',
 						location: 'Powai',
@@ -406,7 +412,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 						discount:'Get 15% off on all home-delivery orders. Valid only when you order online on Zomato.',
 						image: 'https://tinyurl.com/y7hwh5mr'
 					},
-					{
+					{           //restaurant 4 for Restraunt.html
 						name: 'Tribute',
 						address: '89-B, Monica Complex, Ambamata Road, Udaipur',
 						location: 'Fateh Sagar',
@@ -421,7 +427,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 						order:  '20mins Rs.100',
 						image: 'https://tinyurl.com/y9daexb6'
 					},
-					{
+					{          //restaurant 5 for Restraunt.html
 						name: 'Farzi Cafe',
 						address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
 						location: 'Connaught Place',
@@ -436,7 +442,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 						order:'70mins Rs.30',
 						image: 'https://tinyurl.com/y9urntqf'
 					},
-					{
+					{              //restaurant 6 for Restraunt.html
 						name: 'Jalpaan Restraunt',
 						address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
 						location: 'RS Puram',
@@ -452,7 +458,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 						image: 'https://tinyurl.com/ycp69uuf'
 					},
 
-					{
+					{               //restaurant 7 for Restraunt.html
 						name: 'The French Door',
 						address: '102, West Bashyakaralu Road, RS Puram, Coimbatore',
 						location: 'RS Puram',
@@ -467,7 +473,7 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 						order:'70mins Rs.50',
 						image: 'https://tinyurl.com/yb5fn87q'
 					},
-					{
+					{                //restaurant 8 for Restraunt.html
 						name: 'Bikaner Sweets',
 						address: 'Near Devkamal Hospital, Ratu Road, Ratu, Ranch',
 						location: 'Ratu',

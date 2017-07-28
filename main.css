@@ -10,7 +10,7 @@ body {
 }
 
 .hero {
-
+    background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
     background-size: cover;
     min-height: 300px;
     border-radius: 4px;
@@ -198,33 +198,6 @@ body {
 
 }
 
-html,body {
-    height:100%;
-	width:100%;
-	position:relative;
-}
-#background-carousel{
-	position:absolute;
-	width:100%;
-	height:50%;
-	z-index:-1;
-}
-.carousel,
-.carousel-inner {
-	width:100%;
-	height:100%;
-	z-index:0;
-	overflow:hidden;
-}
-.item {
-	width:100%;
-	height:100%;
-	background-position:center;
-	background-size:cover;
-	z-index:0;
-}
-
-
 .bestDish .button {
     display: inline-block;
     background-color:#cb202d;
@@ -232,4 +205,10 @@ html,body {
     padding: 0.4rem 1rem;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.list {
+  background-color:  lightgrey;
+  width: 20%;
+  margin: 10px auto;
 }

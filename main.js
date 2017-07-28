@@ -205,7 +205,9 @@
 											}
            })
 
-					 foodieApp.controller('favController',function($scope,$location,$http) {
+//favouritecontroller
+
+foodieApp.controller('favController',function($scope,$location,$http) {
 
 
 	$scope.ingredients = [];
@@ -224,29 +226,29 @@
 						id: 2,
 						bestDish: {
 									name: 'Corn Pizza',
-									image: 'https://images.food52.com/zyrGNL1_8ZxmJ43jtBLQoyLfNvA=/753x502/c947f605-2d61-4a10-9f69-abc7dda9fffb--DSC07406.JPG'
+									image: 'http://www.dominos.co.in/files/items/dish2-chicken-golden-delight-copy-1346593770-771x299.jpg'
 								},
 
-            image: 'https://images.food52.com/zyrGNL1_8ZxmJ43jtBLQoyLfNvA=/753x502/c947f605-2d61-4a10-9f69-abc7dda9fffb--DSC07406.JPG'
+            image: 'http://www.dominos.co.in/files/items/dish2-chicken-golden-delight-copy-1346593770-771x299.jpg'
           },
           {
 								id: 3,
 								bestDish: {
 											name: 'Italian Pasta',
-											image: 'https://www.sensibus.com/deli/sites/sensibus.com/files/recipes/pasta-dish-2_0.jpg'
+											image: 'https://www.wish-bone.com/wp-content/uploads/2013/11/ClassicItalianPastaSalad.jpg'
 										},
 
-                image: 'https://www.sensibus.com/deli/sites/sensibus.com/files/recipes/pasta-dish-2_0.jpg'
+                image: 'https://www.wish-bone.com/wp-content/uploads/2013/11/ClassicItalianPastaSalad.jpg'
               },
               {
 
 										id: 4,
 										bestDish: {
 													name: 'Grilled fish',
-													image: 'https://thumbs.dreamstime.com/z/grilled-fish-served-potatoes-sauce-lemon-close-up-29801081.jpg'
+													image: 'http://caribbeanpot.com/wp-content/uploads/2016/07/herb-grilled-fish-1.jpg'
 												},
 
-                    image: 'https://thumbs.dreamstime.com/z/grilled-fish-served-potatoes-sauce-lemon-close-up-29801081.jpg'
+                    image: 'http://caribbeanpot.com/wp-content/uploads/2016/07/herb-grilled-fish-1.jpg'
                     }]
 
 
@@ -343,6 +345,8 @@
 
 
 })
+
+
 
 					 //logincontroller
 					  foodieApp.controller('loginController',function($scope,$location) {

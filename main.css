@@ -21,7 +21,7 @@ body {
 
 }
 .hero {
-    background-image: url('http://mehfilbestcuisine.com/wp-content/uploads/2015/12/Featured-image-indian-food.jpg');
+    background-image: url('https://tinyurl.com/yayrtcmq');
     background-size: cover;
     background-position: center;
     min-height: 400px;
@@ -181,6 +181,11 @@ body {
   width: 20%;
   margin: 10px auto;
 }
+.img{
+    background-image: url('http://www.harrysrestaurantcafe.com/images/background1.jpg');
+    background-size: cover;
+}
+
 
 .zomato{
   border-radius:5px;

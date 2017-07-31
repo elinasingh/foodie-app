@@ -3,9 +3,6 @@
 		 var foodieApp = angular.module('foodieApp',['ngRoute']);
          //console.log(foodieApp);
 
-			  $('#myCarousel').carousel({
-				 	pause: 'none'
-				 })
 
        // configure krna
 			 foodieApp.config(function ($routeProvider) { //pass function as parameter

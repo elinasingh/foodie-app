@@ -35,9 +35,6 @@ body {
 
 }
 
-
-
-
 .foodie{
   border-radius:5px;
   height:110px;
@@ -339,6 +336,31 @@ top:-68px;
   top:-230px;
   left:-653px;
   padding:9px;
+}
+
+#about-order{
+
+  position:relative;
+  top:-18px;
+  margin-left:45%;
+  font-size:45px;
+
+}
+.about-order1
+{
+
+  position:relative;
+  top:-18px;
+  margin-left:28%;
+  font-size:28px;
+}
+.order1
+{
+
+  position:relative;
+  top:-18px;
+  margin-left:20%;
+  font-size:20px;
 }
 
 

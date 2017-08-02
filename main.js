@@ -27,6 +27,10 @@
 						 templateUrl: 'pages/order.html',       //order url
 						 controller: 'orderController'
 					 })
+					 .when('/about', {
+ 						 templateUrl: 'pages/about.html',       //about url
+ 						 controller: 'aboutController'
+ 					 })
 			})
 
 
@@ -390,11 +394,19 @@ foodieApp.controller('favController',function($scope,$location,$http) {
 											 $location.url('home');
 										 }
 			          })
-								foodieApp.controller('orderController',function($scope,$location) {
 
-													console.log("Do Something")
+								 //iss function ke andar jo b aayega bhi kaam hoga aboutcontroller ka
+
+								foodieApp.controller('aboutController',function($scope,$location) {
+
+													//console.log("Do Something")
 
 									 })
+									 foodieApp.controller('orderController',function($scope,$location) {
+
+	 													//console.log("Do Something")
+
+	 									 })
 
 		      //iss function ke andar jo b aayega bhi kaam hoga maincontroller ka
 

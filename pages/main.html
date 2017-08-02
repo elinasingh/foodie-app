@@ -20,7 +20,7 @@
                     <ul class="nav navbar-nav navbar-right">
                        <li><a href="#!/home">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Order Online</a></li>
+                        <li><a href="#!/order">Order Online</a></li>
                         <li><a href="#!/">Logout</a></li>
                     </ul>
                 </div>
@@ -39,7 +39,7 @@
 
 
        <img ng-src="zomato.jpg" class="zomato">
-      <p><b>Find the best restaurants in town</b></p>
+      <p>Find the best restaurants,cafe in town</p>
 
     </div>
 	<!--/.---------------------------------------------------------------------------------------->
@@ -51,7 +51,7 @@
        <div class="search-bar">
 			<form>
 			<div class="input-wrapper">
-			  <input type="text" class="form-control" placeholder="Search..." ng-model="query">
+			  <input type="text" class="form-control" placeholder="Search for restaurants or cuisines....." ng-model="query">
 			</div>
 			<button type="submit" class="btn btn-default">Search</button>
 		  </form>
@@ -74,8 +74,8 @@
 							   <small>{{restaurant.category}} </small>
 							</div>
 
-							<div class="rest-name">
-              <a ng-href="#!/restaurant/{{restaurant.id}}"><strong>{{restaurant.name}}</strong></a>
+							<div class="rest-name ">
+              <a ng-href="#!/restaurant/{{restaurant.id}}"><strong><div class="main">{{restaurant.name}}</div></strong></a>
 
 							</div>
 							<div class="rest-address">

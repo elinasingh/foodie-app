@@ -1,6 +1,8 @@
 <!------------------------------------background image ------------------------------------------------->
 
 <div class ="img">
+
+    <h3 class="best-dishes">favourite Dishes in Our Restaurant</h3>
 <!------------------------------------------lists---------------------------->
 <div class="list" id="list1">
 <h4>FOOD ITEMS YOU MAY LIKE:</<h4></h4>
@@ -39,7 +41,7 @@
                        <div class="bestDish" ng-if="restaurant.bestDish">
                              <span>{{restaurant.bestDish.name}} </span>
                              <!--------------------------------------------button for next fav food page------------------->
-                             
+
                              <div ng-click="getFav(restaurant.bestDish.image)" class="button">See If your Fav or not</div>
 
                        </div>

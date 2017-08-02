@@ -210,7 +210,7 @@ body {
 }
 
 
-.zomato{
+.foodie{
   border-radius:5px;
   height:110px;
   width:120px;
@@ -251,8 +251,8 @@ text-shadow:5px 5px 5px #CD5C5C;
 #order-online{
 
   position:relative;
-  top:-20px;
-  margin-left:37%;
+  top:-18px;
+  margin-left:35%;
 
 }
 #order-online1{
@@ -275,58 +275,43 @@ text-shadow:5px 5px 5px #CD5C5C;
 #text-online{
 position: relative;
 left:23%;
-  font-family: sans-serif;
+top:-10px;
 
 }
 #text-online1{
 position:relative;
 left:45%;
-top:-50px;
-  font-family: sans-serif;
+top:-40px;
+
 
 }
 #text-online2{
 position:relative;
-left:65%;
-top:-100px;
-  font-family:sans-serif;
+left:62%;
+top:-68px;
+
 }
 
 .img-nline{
-  margin-left:18%;
+  margin-left:17%;
 }
 .download-order{
   position:relative;
-  top:-400px;
+  top:-350px;
   margin-left:50%;
 }
-.download-order1{
-position:relative;
-top:-390px;
-margin-left: 50%;
 
-}
 .idea{
   position:relative;
-  top:-370px;
+  top:-340px;
   margin-left:50%;
 
 }
 .idea1{
   position:relative;
-  top:-370px;
+  top:-340px;
 }
-.input-order{
 
-  position:relative;
-  border-radius: 4px;
-  border:0.01rem solid #E5E8E8;
-  top:-300px;
-  left:-415px;
-  padding:8px;
-  width:15%;
-    font-family: Calibri;
-}
 .button-order{
   background-color: #cb202d;
   color:white;
@@ -334,23 +319,23 @@ margin-left: 50%;
   border-radius: 4px;
   border:0.01rem solid #E5E8E8;
   position:relative;
-  top:-250px;
+  top:-230px;
   left:-653px;
-  padding:8px;
+  padding:9px;
   font-family: Calibri;
 
 }
 .button-order:hover{
-  background-color: darkred;
+  background-color:#A93226;
   font-family: Calibri;
   color:white;
   border:0px;
   border-radius: 4px;
   border:0.01rem solid #E5E8E8;
   position:relative;
-  top:-250px;
+  top:-230px;
   left:-653px;
-  padding:8px;
+  padding:9px;
 }
 
 

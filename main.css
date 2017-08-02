@@ -35,6 +35,36 @@ body {
 
 }
 
+
+
+
+.foodie{
+  border-radius:5px;
+  height:110px;
+  width:120px;
+  position:relative;
+  top:-10px;
+}
+
+.btn{
+border: none;
+background-color: brown;
+color: white;
+padding: 10px 20px;
+}
+
+
+.btn:hover{
+  border:none;
+  background-color:darkred  ;
+
+}
+
+.main {
+
+    color: #cb202d;
+}
+
 #app .navbar {
     color: white;
     background-color: #cb202d;
@@ -207,34 +237,6 @@ body {
     background:#DEF5F2;
     height:660px;
 
-}
-
-
-.foodie{
-  border-radius:5px;
-  height:110px;
-  width:120px;
-  position:relative;
-  top:-10px;
-}
-
-.btn{
-border: none;
-background-color: brown;
-color: white;
-padding: 10px 20px;
-}
-
-
-.btn:hover{
-  border:none;
-  background-color:darkred  ;
-
-}
-
-.main {
-
-    color: #cb202d;
 }
 
 .best-dishes{
